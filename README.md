@@ -48,17 +48,16 @@ When the API was working, users could:
 
 ### Welcome / Category Selection
 
-![Welcome Page](https://via.placeholder.com/600x400.png?text=Welcome+Page)
+<img width="1317" height="749" alt="image" src="https://github.com/user-attachments/assets/5e6faabe-c7ee-406b-8846-255950b08069" />
 
 ### Main Page with Dashboard & Search
 
-![Main Page](https://via.placeholder.com/600x400.png?text=Main+Dashboard+with+Search)
+<img width="1162" height="839" alt="image" src="https://github.com/user-attachments/assets/ca9697b0-e2a3-4dfa-9571-7014978a7a70" />
 
 ### Item Detail Page
 
-![Item Page](https://via.placeholder.com/600x400.png?text=Character+Detail+Page)
+<img width="1192" height="671" alt="image" src="https://github.com/user-attachments/assets/8c0165e6-1e73-480f-bf0f-bc7dd3c652f9" />
 
-_(Replace placeholders with your own screenshots if you have archived ones.)_
 
 ## Project Structure (simplified)
 
@@ -88,7 +87,6 @@ src/
 - styled-components
 - Fetch API / Axios
 - MD5 hashing (for Marvel API auth)
-- GitHub Pages (static deployment)
 
 ## Installation & Setup
 
