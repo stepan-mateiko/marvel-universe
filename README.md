@@ -90,13 +90,13 @@ src/
 - MD5 hashing (for Marvel API auth)
 - GitHub Pages (static deployment)
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/stepan-mateiko/react-project.git
-cd react-project
+git clone https://github.com/stepan-mateiko/marvel-universe.git
+cd marvel-universe
 npm install
 npm start
 ```
