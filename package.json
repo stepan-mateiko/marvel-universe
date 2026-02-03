@@ -30,7 +30,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://stepan-mateiko.github.io/react-project",
   "eslintConfig": {
     "extends": [
       "react-app",
