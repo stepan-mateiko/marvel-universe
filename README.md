@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+# Marvel Universe (React SPA)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React single-page application for exploring Marvel characters, comics, series, and events using the official **Marvel Comics API**.
 
-## Available Scripts
+> ⚠️ Status: Archived / Educational Demo
 
-In the project directory, you can run:
+This project was originally created in **2023** as a learning project demonstrating:
 
-### `npm start`
+- React
+- Client-side routing
+- API integration
+- Dynamic data-driven UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As of **2025**, the public Marvel Developer API is no longer active or consistently available.  
+The application UI still runs correctly, but **all external API requests return errors**, so no real Marvel data is loaded.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The repository is preserved as an educational example of how to build a React app that integrates with a third-party REST API.
 
-### `npm test`
+## What This Project Demonstrates
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Even though the live data source is no longer available, the project still shows how to implement:
 
-### `npm run build`
+- Multi-page SPA navigation with **React Router v6**
+- Reusable, composable React components
+- Search with prefix filtering logic
+- Loading and error states
+- Responsive card-based layouts
+- Separation of concerns (pages, UI components, constants, API layer)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When the API was working, users could:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Browse random Marvel items
+- Search for characters, comics, series, and events
+- Open detailed pages with related content links
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features (UI & Architecture)
 
-### `npm run eject`
+- Category selection: **Characters / Comics / Events / Series**
+- Search input with live query handling
+- Dedicated detail page layout for each item type
+- Components for related entities (characters, comics, stories, creators, etc.)
+- Centralized API configuration
+- Styled UI using Material UI and styled-components
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Screenshots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> These illustrate how the app looked when the Marvel API was operational.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Welcome / Category Selection
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Welcome Page](https://via.placeholder.com/600x400.png?text=Welcome+Page)
 
-## Learn More
+### Main Page with Dashboard & Search
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Main Page](https://via.placeholder.com/600x400.png?text=Main+Dashboard+with+Search)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Item Detail Page
 
-### Code Splitting
+![Item Page](https://via.placeholder.com/600x400.png?text=Character+Detail+Page)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+_(Replace placeholders with your own screenshots if you have archived ones.)_
 
-### Analyzing the Bundle Size
+## Project Structure (simplified)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+src/
+├── components/
+│ ├── pages/
+│ │ ├── EnterPage.jsx # category selection
+│ │ ├── MainPage.jsx # search + dashboard
+│ │ └── ItemPage.jsx # detailed item view
+│ ├── Header.jsx
+│ ├── Footer.jsx
+│ ├── Search.jsx
+│ ├── Dashboard.jsx
+│ ├── Information.jsx # main item renderer
+│ ├── Container.jsx # related items renderer
+│ └── ...
+├── constants/
+│ ├── routes.js
+│ └── api.js # Marvel API config & auth
+└── App.jsx
 
-### Making a Progressive Web App
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- React 18
+- React Router v6
+- Material UI
+- styled-components
+- Fetch API / Axios
+- MD5 hashing (for Marvel API auth)
+- GitHub Pages (static deployment)
 
-### Advanced Configuration
+## 📦 Installation & Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Clone the repository:
 
-### Deployment
+```bash
+git clone https://github.com/stepan-mateiko/react-project.git
+cd react-project
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The app will run at:
+http://localhost:3000
 
-### `npm run build` fails to minify
+Note: The UI will load, but no external data will appear because the Marvel API is inactive.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Marvel API Configuration (Historical)
+
+The app was designed to use the Marvel Developer API with the following auth scheme:
+ts + privateKey + publicKey → MD5 hash
+
+Keys were configured in:
+src/constants/api.js
+
+Because the API is no longer functional, these keys are now effectively unused.
+
+## Deployment
+
+Originally deployed via GitHub Pages:
+https://marvel-universe-three.vercel.app/
+
+The deployed version shows the interface but cannot display live Marvel data.
+
+## Known Limitations
+
+- Marvel API endpoints return errors (API likely sunset)
+- No offline dataset or mock data by default
+- No server-side proxy or caching layer
+- API keys are stored client-side (acceptable only for demos)
+
+## Possible Improvements (If You Fork This Project)
+
+To make the app functional again without the Marvel API, you could:
+
+- Replace API calls with a local JSON dataset (mock Marvel-like data)
+- Add a mock server (e.g. using json-server or MSW)
+- Implement your own backend proxy with cached/static data
+- Adapt the UI to work with another public comics or media API
+
+## License & Credits
+
+This project is for educational and demonstration purposes only.
+
+Marvel characters and related content are © Marvel. All rights reserved.
+
+This repository does not include Marvel data, only the application code that once consumed the public API.
