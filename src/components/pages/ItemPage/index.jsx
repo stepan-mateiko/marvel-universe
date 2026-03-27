@@ -18,6 +18,19 @@ const ItemPage = ({ setId }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const base =
+      element === "character"
+        ? "Character"
+        : element === "comic"
+        ? "Comic"
+        : element === "event"
+        ? "Event"
+        : "Series";
+    const name = item ? item.name || item.title : "Details";
+    document.title = `Marvel Universe | ${base} | ${name}`;
+  }, [element, item]);
+
+  useEffect(() => {
     const fetchItem = async () => {
       try {
         const response = await fetch(

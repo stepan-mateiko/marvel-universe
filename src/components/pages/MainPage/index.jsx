@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import propTypes from "prop-types";
 
 import Dashboard from "../../Dashboard";
@@ -8,6 +8,19 @@ import Footer from "../../Footer";
 
 const MainPage = ({ id, setId }) => {
   const [category, setCategory] = useState(id || "character");
+
+  useEffect(() => {
+    const label =
+      category === "character"
+        ? "Characters"
+        : category === "comic"
+        ? "Comics"
+        : category === "event"
+        ? "Events"
+        : "Series";
+    document.title = `Marvel Universe | ${label}`;
+  }, [category]);
+
   return (
     <>
       <Header setCategory={setCategory} setId={setId} />

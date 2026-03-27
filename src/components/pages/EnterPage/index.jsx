@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import propTypes from "prop-types";
 
 import ROUTES from "../../../constants/routes";
@@ -15,6 +15,10 @@ import {
 } from "./styles";
 
 const EnterPage = ({ setId }) => {
+  useEffect(() => {
+    document.title = "Marvel Universe | Choose a Category";
+  }, []);
+
   const handleButtonClick = (id) => {
     setId(id);
   };
