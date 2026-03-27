@@ -121,6 +121,26 @@ https://marvel-universe-three.vercel.app/
 
 The deployed version shows the interface but cannot display live Marvel data.
 
+## SEO & Routing
+
+- The app uses `BrowserRouter` for clean URLs.
+- A Vercel rewrite (`vercel.json`) routes all paths to `index.html` so deep links work.
+- Basic SEO tags, `robots.txt`, and `sitemap.xml` are included in `public/`.
+
+## Tests
+
+Run tests with CRA:
+
+```bash
+npm test
+```
+
+Or run Jest directly (JSX supported):
+
+```bash
+node node_modules/jest/bin/jest.js
+```
+
 ## Known Limitations
 
 - Marvel API endpoints return errors (API likely sunset)
