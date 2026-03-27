@@ -25,7 +25,10 @@ const EnterPage = ({ setId }) => {
 
   return (
     <Container>
-      <Image src="https://wallpaperaccess.com/full/699907.jpg" />
+      <Image
+        src="https://wallpaperaccess.com/full/699907.jpg"
+        alt="Marvel heroes collage background"
+      />
       <Info>
         <Title variant="h3">Welcome to </Title>
         <img src={Universe} alt="universe" width="70%" />

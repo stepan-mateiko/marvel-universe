@@ -61,15 +61,17 @@ const Search = ({ element }) => {
   };
 
   return (
-    <SearchPanel>
-      <SearchTitle>{`Search for the ${element}s you want to read about`}</SearchTitle>
-      <SearchForm onSubmit={handleSearch}>
+    <SearchPanel aria-labelledby="search-title">
+      <SearchTitle id="search-title">{`Search for the ${element}s you want to read about`}</SearchTitle>
+      <SearchForm onSubmit={handleSearch} role="search">
         <SearchField
           id="outlined-basic"
+          label="Search"
           variant="outlined"
           type="text"
           value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
+          inputProps={{ "aria-label": `Search ${element}s` }}
         />
         <SearchButton
           variant="contained"
@@ -83,7 +85,7 @@ const Search = ({ element }) => {
         {items.map((item) => (
           <SearchItem key={item.id}>
             <SearchLink to={`/${element}/${item.id}`}>
-              <Icon src={item.image} />
+              <Icon src={item.image} alt={item.name} />
               <p>{item.name}</p>
             </SearchLink>
           </SearchItem>

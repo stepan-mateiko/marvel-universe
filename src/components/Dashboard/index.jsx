@@ -42,15 +42,15 @@ const Dashboard = ({ element }) => {
   }, [element]);
 
   return (
-    <DashboardPanel>
-      <DashboardTitle>{`Or discover other random ${element}s`}</DashboardTitle>
+    <DashboardPanel aria-labelledby="dashboard-title">
+      <DashboardTitle id="dashboard-title">{`Or discover other random ${element}s`}</DashboardTitle>
       {isLoading && <Loader />}
       {error && <Error errormessage={error} />}
       <Container>
         {items.map((item) => (
           <Card key={item.id}>
             <DashboardLink to={`/${element}/${item.id}`}>
-              <Icon src={item.image} />
+              <Icon src={item.image} alt={item.name} />
               <Name>{item.name}</Name>
             </DashboardLink>
           </Card>

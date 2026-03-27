@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { TextField, Button } from "@mui/material";
 
-export const SearchPanel = styled.div`
+export const SearchPanel = styled.section`
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;

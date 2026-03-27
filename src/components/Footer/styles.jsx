@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const AllFooter = styled.footer`
   background-color: black;
@@ -20,7 +19,7 @@ export const FooterContainer = styled.div`
     flex-direction: column;
   }
 `;
-export const LogoLink = styled(Link)`
+export const LogoLink = styled.a`
   width: 20%;
   @media (max-width: 360px) {
     width: 80%;
@@ -33,7 +32,7 @@ export const LogoLink = styled(Link)`
     margin-bottom: 20px;
   }
 `;
-export const Links = styled.div`
+export const Links = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -45,7 +44,7 @@ export const Links = styled.div`
     margin-bottom: 20px;
   }
 `;
-export const TextLink = styled(Link)`
+export const TextLink = styled.a`
   text-decoration: none;
   color: white;
   transition: color 0.2s ease-in-out;
@@ -64,7 +63,7 @@ export const IconWrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
 `;
-export const IconLink = styled(Link)`
+export const IconLink = styled.a`
   background: linear-gradient(
     to bottom,
     black 0%,

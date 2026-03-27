@@ -39,42 +39,72 @@ const Footer = () => {
   return (
     <AllFooter>
       <FooterContainer>
-        <LogoLink to={marvel} target="_blank">
+        <LogoLink href={marvel} target="_blank" rel="noopener noreferrer">
           <img src={Logo} alt="logo" width="100%" />
         </LogoLink>
-        <Links>
-          <TextLink to={privacy} target="_blank">
+        <Links aria-label="Legal and policy links">
+          <TextLink href={privacy} target="_blank" rel="noopener noreferrer">
             Privacy Policy
           </TextLink>
-          <TextLink to={terms} target="_blank">
+          <TextLink href={terms} target="_blank" rel="noopener noreferrer">
             Terms of Use
           </TextLink>
-          <TextLink to={license} target="_blank">
+          <TextLink href={license} target="_blank" rel="noopener noreferrer">
             License agreement
           </TextLink>
-          <TextLink to={cookie} target="_blank">
+          <TextLink href={cookie} target="_blank" rel="noopener noreferrer">
             Cookie Policy
           </TextLink>
         </Links>
         <Icons>
           <p>Follow Marvel</p>
           <IconWrapper>
-            <IconLink to={facebookLink} target="_blank">
+            <IconLink
+              href={facebookLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Marvel on Facebook"
+            >
               <Facebook />
             </IconLink>
-            <IconLink to={instagramLink} target="_blank">
+            <IconLink
+              href={instagramLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Marvel on Instagram"
+            >
               <Instagram />
             </IconLink>
-            <IconLink to={twitterLink} target="_blank">
+            <IconLink
+              href={twitterLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Marvel on Twitter"
+            >
               <Twitter />
             </IconLink>
-            <IconLink to={tumblrLink} target="_blank">
+            <IconLink
+              href={tumblrLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Marvel on Tumblr"
+            >
               <Tumblr />
             </IconLink>
-            <IconLink to={youtubeLink} target="_blank">
+            <IconLink
+              href={youtubeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Marvel on YouTube"
+            >
               <Youtube />
             </IconLink>
-            <IconLink to={pinterestLink} target="_blank">
+            <IconLink
+              href={pinterestLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Marvel on Pinterest"
+            >
               <Pinterest />
             </IconLink>
           </IconWrapper>

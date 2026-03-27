@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Container = styled.div`
+export const Container = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +53,7 @@ export const StyledButton = styled.button`
     width: 80%;
   }
 `;
-export const Info = styled.div`
+export const Info = styled.section`
   position: absolute;
   top: 50%;
   left: 50%;

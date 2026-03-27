@@ -47,13 +47,14 @@ const ItemPage = ({ setId }) => {
   return (
     <div style={{ backgroundColor: "royalblue" }}>
       <Header category={category} setCategory={setCategory} setId={setId} />
-      {error && <Error errormessage={error} />}
-
-      {!item ? (
-        <Loader />
-      ) : (
-        <Information item={item} id={id} element={element} />
-      )}
+      <main>
+        {error && <Error errormessage={error} />}
+        {!item ? (
+          <Loader />
+        ) : (
+          <Information item={item} id={id} element={element} />
+        )}
+      </main>
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InformationPanel = styled.div`
+export const InformationPanel = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,8 +27,7 @@ export const InformationWrapper = styled.div`
   }
 `;
 
-export const InfoList = styled.ul`
-  list-style-type: none;
+export const InfoList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +37,7 @@ export const InfoList = styled.ul`
   width: 100%;
 `;
 
-export const InfoItem = styled.li`
+export const InfoItem = styled.h3`
   font-size: 24px;
   font-weight: 700;
   margin: 50px 0 20px 0;

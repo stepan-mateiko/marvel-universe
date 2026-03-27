@@ -24,8 +24,10 @@ const MainPage = ({ id, setId }) => {
   return (
     <>
       <Header setCategory={setCategory} setId={setId} />
-      <Search element={category} />
-      <Dashboard element={category} />
+      <main>
+        <Search element={category} />
+        <Dashboard element={category} />
+      </main>
       <Footer />
     </>
   );

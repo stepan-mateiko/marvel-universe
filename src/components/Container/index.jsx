@@ -65,7 +65,7 @@ const Container = ({ id, element, item }) => {
         {shortList.map((item) => (
           <Card key={item.id}>
             <ItemLink to={`/${item.category}/${item.id}`}>
-              <Icon src={item.image} width="100px" />
+              <Icon src={item.image} width="100px" alt={item.name} />
               <Name>{item.name}</Name>
             </ItemLink>
           </Card>

@@ -66,8 +66,8 @@ const Information = ({ item, id, element }) => {
   const thirdContainer = isSerie ? "comics" : "series";
 
   return (
-    <InformationPanel>
-      <Name>{element === "character" ? name : title}</Name>
+    <InformationPanel aria-labelledby="item-title">
+      <Name id="item-title">{element === "character" ? name : title}</Name>
       <InformationWrapper>
         <Basics item={item} element={element} />
 

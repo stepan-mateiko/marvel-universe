@@ -51,7 +51,7 @@ export const BurgerMenuIconImg = styled.img`
   height: 50px;
 `;
 
-export const HeaderMenu = styled.div`
+export const HeaderMenu = styled.nav`
   margin-top: 20px;
   display: ${(props) => (props.showMenu ? "flex" : "none")};
   flex-direction: column;

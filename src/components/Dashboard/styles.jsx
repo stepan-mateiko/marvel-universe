@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const DashboardPanel = styled.div`
+export const DashboardPanel = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;

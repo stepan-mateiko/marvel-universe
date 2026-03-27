@@ -31,15 +31,26 @@ const Header = ({ setCategory, setId }) => {
   return (
     <StyledHeader>
       <HeaderTop>
-        <HeaderLogo to={ROUTES.ENTER}>
+        <HeaderLogo to={ROUTES.ENTER} aria-label="Marvel Universe home">
           <img src={Logo} alt="logo" />
         </HeaderLogo>
         <HeaderTitle>Explore Marvel Universe</HeaderTitle>
-        <BurgerMenuButton onClick={handleBurgerMenuClick}>
+        <BurgerMenuButton
+          type="button"
+          onClick={handleBurgerMenuClick}
+          aria-expanded={showMenu}
+          aria-controls="primary-navigation"
+          aria-label="Toggle navigation menu"
+        >
           <BurgerMenuIconImg src={BurgerMenuIcon} alt="burger menu icon" />
         </BurgerMenuButton>
       </HeaderTop>
-      <HeaderMenu showMenu={showMenu}>
+      <HeaderMenu
+        id="primary-navigation"
+        aria-label="Primary navigation"
+        aria-hidden={!showMenu}
+        showMenu={showMenu}
+      >
         <StyledButton
           to={ROUTES.MAIN}
           onClick={() => handleButtonClick("character")}

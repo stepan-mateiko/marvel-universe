@@ -23,7 +23,12 @@ const Basics = ({ item, element }) => {
       <Links>
         <LinksTitle>{`You can get more detailed info about this ${element} here`}</LinksTitle>
         {urls.map((url) => (
-          <Link key={url.type} href={url.url} target="_blank">
+          <Link
+            key={url.type}
+            href={url.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <LinkButton variant="contained" color="error">
               {url.type}
             </LinkButton>
