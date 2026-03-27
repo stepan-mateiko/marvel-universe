@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://marvel-universe-three.vercel.app/sitemap.xml
